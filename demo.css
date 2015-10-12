@@ -1,0 +1,278 @@
+html { font-size: 1em; }
+
+h1 { font-size: 2.074em; }
+
+h2 { font-size: 1.728em; }
+
+h3 { font-size: 1.44em; }
+
+h4 { font-size: 1.2em; }
+
+small { font-size: 0.833em; }
+
+.box { padding: 1.25em; }
+
+@media screen and (min-width: 1400px) {
+  html { font-size: 1.25em; }
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #224268;
+	color: #eff;
+	line-height: 1.62em;
+}
+
+.tabs {
+	margin: 1rem 0;
+	background: #222;
+}
+
+.tab-switch {
+	display: none;
+}
+
+.tab-label {
+	position: relative;
+	display: inline-block;
+	line-height: 2.8em;
+	background: #222;
+	border-right: 0.125rem solid #101010;
+	color: #eff;
+	cursor: pointer;
+	top: 0;
+	transition: all 0.25s;
+	text-align: center;
+	width: 20%;
+}
+
+.tab-switch:checked + .tab-label {
+	background: #fff;
+	color: #222;
+	transition: all 0.35s;
+	z-index: 1;
+}
+
+.tab-label:hover {
+	top: -0.1rem;
+	transition: top 0.25f;
+}
+
+.tab-content {
+	padding: 0;
+	position: absolute;
+	top: -9999px;
+	left: 0;
+	z-index: 1;
+	opacity: 0;
+	float: left;
+	width: 100%;
+	background: #222;
+	border-bottom: 0.5em solid #222;
+	margin-bottom: 1rem;
+}
+
+.action-1 {
+	background: #abb;
+	color: #222;
+	border-radius: 0.5rem;
+	border: 0.2rem solid #fff;
+	padding: 0.1rem;
+	text-align: center;
+}
+
+.action-1 {
+	position: absolute;
+	top: 10em;
+	right: 4em;
+	z-index: 3;
+	opacity: 1;
+	float: right;
+	width: 30%;
+	display: inline;
+}
+
+.action-2 {
+	margin-top: 1em;
+	
+}
+
+input[type=text] {
+
+	border-radius: 0.3rem;
+	padding: 0.2em;
+	margin: 0.5em;
+	background: #fff;
+	color: #222;
+	text-align: center;
+	border: 0.1rem solid #ccc;
+	width: 80%;
+}
+
+.action-button {
+	text-align: center;
+	width: 50%;
+	background: #28f;
+	border-radius: 0.4rem;
+	border: 0.1rem solid #224268;
+	padding: 0.5em;
+	margin: auto;
+	margin-top: 1em;
+	font-weight: bold;
+	color: #fff;
+	line-height: 1.2em;
+	cursor: pointer;
+}
+
+#tab-1:checked ~ #tab-content-1, #tab-2:checked ~ #tab-content-2, #tab-3:checked ~ #tab-content-3 {
+	z-index: 2;
+	opacity: 1;
+	transition: opacity 0.35s;
+	position: relative;
+	top: -0.5em;
+}
+
+.tab-image {
+	width: 100%;
+}
+
+.details {
+	background: #eff;
+	color: #222;
+	border-radius: 0.2rem;
+	padding: 0.8rem;
+	font-size: 1.2em;
+}
+
+.details-center {
+	background: #eff;
+	color: #222;
+	font-size: 1.2em;
+	border-radius: 0.2rem;
+	padding: 0.8rem;
+}
+
+.about {
+	text-align: center;
+	background: #28f;
+	color: #eff;
+	border-radius: 0.2rem;
+	padding: 1rem;
+	font-size: 1.4em;
+}
+
+.footer {
+	margin-top: 2rem;
+	padding: 1rem;
+	text-align: center;
+	background: #112134;
+	color: #788;
+}
+
+.waiting {
+	line-height: 0;
+	float: left;
+	padding: 1em;
+	position: absolute;
+	z-index: 3;
+	width: 50%;
+}
+
+.waiting-img {
+	width: 100%;
+}
+
+.nav-bar, .nav-bar-min {
+	background: #222;
+	line-height: 2rem;
+	color: #eff;
+	font-weight: bold;
+	text-align: center;
+}
+
+.nav-link {
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-link:hover {
+	color: #28f;
+}
+
+@media screen and (max-width: 1600px) {
+	.tab-label {
+		width: 15%;
+	}
+}
+
+@media screen and (max-width: 900px) {
+
+	.tab-label {
+		width: 20%;
+	}
+	
+	.action-1 {
+		top: 1em;
+	}
+	
+	.nav-bar {
+		display: none;
+	}
+	
+	.nav-bar-min {
+		display: block;
+	}
+}
+@media screen and (max-width: 600px) {
+
+	.tab-label {
+		width: 100%;
+		display: block;
+	}
+	
+	.action-1 {
+		display: none;
+	}
+	
+	.action-2 {
+		display: inline;
+	}
+	
+	.waiting {
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.tab-switch:checked + .tab-label {
+		top: -0.2em;
+		transition: top 0.25f;
+	}
+	.tab-label:hover {
+		top: -0.1rem;
+		transition: top 0.25f;
+	}
+	
+	.action-1 {
+		display: inline;
+	}
+	
+	.action-2 {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.nav-bar {
+		display: block;
+	}
+	
+	.nav-bar-min {
+		display: none;
+	}
+}
