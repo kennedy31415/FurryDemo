@@ -1,2 +1,2 @@
 # FurryDemo
-Website demo for FurryLogic skills assessment.
+Website demo for FurryLogic skills assessment by Daniel Kennedy.
